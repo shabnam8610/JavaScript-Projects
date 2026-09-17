@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Page Website</title>
+    <link rel="stylesheet" href="CSS/one_page_website.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Welcome to My One-Page Website</h1>
+        <p>Explore the gallery below and click any image to open the lightbox.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+
+        <div class="row">
+            <div class="column">
+                <img src="Images/image1_thumb.jpg"
+                     onclick="openModal(); currentSlide(1)"
+                     class="hover-shadow"
+                     alt="Mountain View thumbnail">
+            </div>
+
+            <div class="column">
+                <img src="Images/image2_thumb.jpg"
+                     onclick="openModal(); currentSlide(2)"
+                     class="hover-shadow"
+                     alt="Sunny Valley thumbnail">
+            </div>
+
+            <div class="column">
+                <img src="Images/image3_thumb.jpg"
+                     onclick="openModal(); currentSlide(3)"
+                     class="hover-shadow"
+                     alt="Blue Horizon thumbnail">
+            </div>
+
+            <div class="column">
+                <img src="Images/image4_thumb.jpg"
+                     onclick="openModal(); currentSlide(4)"
+                     class="hover-shadow"
+                     alt="Green Trail thumbnail">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div class="modal-content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="Images/image1_large.jpg" alt="Mountain View large image">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="Images/image2_large.jpg" alt="Sunny Valley large image">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="Images/image3_large.jpg" alt="Blue Horizon large image">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="Images/image4_large.jpg" alt="Green Trail large image">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Thank you for visiting my website.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 One-Page Website</p>
+    </footer>
+
+    <script src="JS/one_page_website.js"></script>
+</body>
+</html>
